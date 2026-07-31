@@ -10,7 +10,7 @@ import Foundation
 struct Movie: Identifiable, Equatable, Sendable {
     let id: Int
     let title: String
-    let releaseDate: String?
+    let releaseDate: Date?
     let posterURL: URL?
     let rating: Double?
 }
