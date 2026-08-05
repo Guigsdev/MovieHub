@@ -35,6 +35,8 @@ final class DiscoveryStore {
             let movies = try await repository.popularMovies(page: 1)
             state = .loaded(movies)
         } catch {
+            print("Discovery loading error:", error)
+
             state = .failed(message: "Impossible de charger les films.")
         }
     }

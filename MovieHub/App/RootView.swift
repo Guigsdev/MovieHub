@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct RootView: View {
+    @State private var discoveryStore: DiscoveryStore
+    
+    init(dependencies: AppDependencies) {
+        _discoveryStore = State(initialValue: dependencies.makeDiscoveryStore())
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        DiscoveryView(store: discoveryStore)
     }
 }
 
-#Preview {
+/*#Preview {
     RootView()
-}
+}*/

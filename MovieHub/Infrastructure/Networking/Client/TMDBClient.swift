@@ -37,9 +37,18 @@ struct TMDBClient {
 
         let (data, response) = try await session.data(for: request)
 
+        guard !data.isEmpty else {
+            throw TMDBClientError.emptyResponse
+        }
+        
         guard let httpResponse = response as? HTTPURLResponse else {
             throw TMDBClientError.invalidResponse
         }
+        /*print("URL:", request.url?.absoluteString ?? "nil")
+        print("Status:", httpResponse.statusCode)
+        print("Content-Type:", httpResponse.value(forHTTPHeaderField: "Content-Type") ?? "nil")
+        print("Data count:", data.count)
+        print("Body:", String(data: data, encoding: .utf8) ?? "<non UTF-8>")*/
 
         guard 200..<300 ~= httpResponse.statusCode else {
             throw TMDBClientError.httpError(

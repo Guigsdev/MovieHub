@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct MovieHubApp: App {
+    private let dependencies: AppDependencies
+    
+    init() {
+        dependencies = AppDependencies(tmdbToken: AppConfiguration.tmdbToken)
+    }
+    
     var body: some Scene {
         WindowGroup {
-            RootView()
+            RootView(dependencies: dependencies)
         }
     }
 }

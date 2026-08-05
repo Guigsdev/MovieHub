@@ -10,6 +10,8 @@ import Foundation
 enum TMDBClientError: Error {
     case invalidURL
     case invalidResponse
+    case emptyResponse
     case httpError(statusCode: Int)
     case decodingFailed(Error)
+    
 }

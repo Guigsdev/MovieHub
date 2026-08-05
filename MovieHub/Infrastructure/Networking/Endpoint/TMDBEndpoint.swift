@@ -15,7 +15,7 @@ extension TMDBEndpoint {
     var path: String {
         switch self {
         case .popularMovies:
-            return "movie/popular"
+            return "/movie/popular"
         }
     }
     
