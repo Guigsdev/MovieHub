@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		86B5C07D3023701F00FFC8BB /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 86B5C07C3023701F00FFC8BB /* Secrets.xcconfig */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		86980349301AA4FE000A80DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		8698033B301AA4FB000A80DB /* MovieHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86980348301AA4FE000A80DB /* MovieHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86980352301AA4FE000A80DB /* MovieHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86B5C07C3023701F00FFC8BB /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Secrets.xcconfig; path = MovieHub/App/Configuration/Secrets.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		86980332301AA4FB000A80DB = {
 			isa = PBXGroup;
 			children = (
+				86B5C07C3023701F00FFC8BB /* Secrets.xcconfig */,
 				8698033D301AA4FB000A80DB /* MovieHub */,
 				8698034B301AA4FE000A80DB /* MovieHubTests */,
 				86980355301AA4FE000A80DB /* MovieHubUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86B5C07D3023701F00FFC8BB /* Secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
